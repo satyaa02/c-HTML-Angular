@@ -1,0 +1,56 @@
+Fcl-framework class library-use of collection of reusable types including classes
+CTS(common type system) interoperability- taking the code from one language to another language
+Common Language specification(CLS)- set of rules followed by a language
+.NET Compliant Languages
+-Key Features of .NET languages
+-Standardized by ECMA(European Computer Manifacture Association)
+-Component based
+-Object Oriented
+-Robust and durable code
+-Array should be zero based
+
+CLS and CTS
+CTS and CLS r parts of .NET-CLR and are responsib
+
+CTS- Common Type System - the datatypes can be used by managed code
+Types of Applications
+-Console Applications (.Exe files)
+-Window Forms Applications(.Exe files)
+-Web Form Application(.aspx, HTML pages)
+-Data Centric Applications
+-Components(.dll files)
+
+clr load the code to RAm(Asssembly loader)
+AL will load code to code verifier which verify conditions
+then it loads to JIT compiler then it will be converted to native code(101010). Then the code is executed
+
+cw 2 times tab
+
+out is used to collect output from the main
+assigning value to out will overridden
+for calling ref variable must be initailized but not for out variable
+
+//foreach only to display data not for taking input
+foreach(string n in names)
+{
+cw("name:"+n)
+}
+//it iterates items in the collection
+ref pass the value
+
+
+Os is the manager which manages ram, cpu ,process of cpu
+
+params
+override
+switchcase stmt to do arithmetic op- take input from user integer
+
+This keyword refers to this instance of the class
+also diff method paramweters and class fields if thy r same
+
+it is used to call another constructor from a constructor in same class
+
+Constructor- same name as class
+no return data type
+automatically initialized when object is created
+

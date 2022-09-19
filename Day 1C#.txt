@@ -1,0 +1,100 @@
+C# data types
+	Value type and Reference type
+		Value type- 
+			alloca in stack memory
+			primarily struct types
+		Reference Type
+			Object created in heap memory
+			Primarily class based
+	Primary datatypes and keywords must be lower case
+	Built-in types/primary data types
+	Integer
+		byte -8bit-System.Byte structure
+		short -16-System.Int16 structure
+		int- 32-System.Int32 structure
+		long -64-System.Int64 structure
+	Decimal
+		float- 32-System.Single struct
+		double-64-System.Double struct
+		decimal-128
+	  boolean-1 bit
+	  char- 2 byte
+	  string - 
+	  object
+User defined data types
+	Structure
+	Enum
+	Classes
+	Tuple
+	Record
+________________________
+string s="Sonu"
+string s= new String("Sonu")
+reference var stores the obj
+If we can't access an obj then it is garbage
+__________________$ - string nee dto be formatted
+
+Arrays- single dimensional, Multi dimensional, Jagged Array
+
+data type [] variable=new datatype[SIZE]
+eg: int[] ar=new int[5]
+Initialize array: int [] ar
+
+Multi
+-datatype [,] variable=new datatype[ROWS,COLUMNS];
+-eg: int [,] mar=new int [3,4];
+
+Jagged
+-Array of arrays
+-datatype [][] jar=new datatype[RowCOUNT][];
+
+Type Conversation
+-CTS (Common Type System)is taking care of the type conversion in .NET
+-Convert the values from one data type to another data type
+	int i=100;
+	long l=i; //no explicit conversion required
+//case 2
+	long l=200;
+	int i=(int)l;//chance of data loss, u need to explicitly convert, TypeCasting required
+typecasting cn be done to only number to number
+we can't type cast int to str or viceversa
+___________
+string to number
+int num = Convert.ToInt32(str);
+
+sh to int conv
+short sh=Int16.Parse(str);
+
+long to int
+long lg=convert.ToInt64(str);
+__________________________
+object is a parent data type
+we can store anything inside object
+boxing and unboxing
+Boxing - a type of upcasting and converting from value type to object type. No need for explicit casting
+//Unboxing - a type of downcasting and converting object back to value type. Explicit casting required.
+___________________________________________
+Nullable types 
+is used for declaring a value types that can store null'
+value types r stored in stack
+Null is used for replacing an address and it is not possible to apply null to the value type
+-Value type can't store null
+-Only reference type can store null
+-Null represents nothing
+-Value types can store null also
+-declared using a ? symbol or nullable class
+ double? d5=null;
+or
+ Nullable<double> d5=null;
+
+-the nullable type use a property .HasValue/. Value gives true
+
+this func may return a double value or null
+static double? GetmyValue()
+{
+return 65944.00;
+//return null
+}
+
+
+

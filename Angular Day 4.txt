@@ -1,0 +1,42 @@
+any html ytag is dom element
+
+ngfor is like foreach group
+
+<ol> <ul> <table> - used often
+
+pipe- working as pipe oper for displaying
+currency pipe
+date pipe
+slice pipe etc
+
+ng model is responsible to collect data and mk it available in component/.ts file
+
+
+<form #loginform=ngForm (ngSubmit)="onSubmit(loginform)">
+<p>
+    <label for="FirstName">Firstname</label>
+    <input type="text"name="Firstname"ngModel placeholder="Enter first name">
+</p>
+<p>
+    <label for="LastName">Lastname</label>
+    <input type="text"name="Lastname"ngModel placeholder="Enter last name">
+</p>
+<p>
+    <button type="submit"value="submit">Submit</button>
+</p>
+</form>
+Form Properties
+pristine- not touched by user...first timw entry its fresh
+touched- touched or clicked
+dirty- written and removed
+submitted- submitted means become true
+to navigate to var url of appl we use Angular router 
+________________________
+routing
+1. new proj
+2. add new comps
+3. add route path in app.routing.module.ts
+4. write <a> tag with router link on app.component.html
+5. write <routeoutlet> tag on app.component.html
+
+active - reference or variable

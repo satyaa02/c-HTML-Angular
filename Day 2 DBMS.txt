@@ -1,0 +1,135 @@
+Contents
+#4 basic terminologies
+1.create database
+2.use db
+3.create table
+4.alter table
+5.view table
+6.insert rows
+7.view distinct rows
+8.view row values based on condi
+9.sort the values in column
+10.Update row vals in table
+11.Delete rows in table
+12.Drop table
+13.Keys- super,candidate,composite,primary,alternate
+14.Null value, Terminologies-prime:part of candidate,non-prime
+15.Normalisation- first, second and third normal form
+16.Constraints- not null,unique,check,default
+17.Primary key, foreign key constraints
+18.Like Operator- %,_,[],^,-
+19.Joins-inner join,left join,right join,full outer join
+_____________________________________________
+27/8/22
+5) Primary key- 
+*ensures col doesn't have any null and dupli value
+Notes:
+*While choosing primary key only one candid key can act as primary key.
+*In a single table u can only have a single primary key constraint attached to it.
+Note: Inorder to assign a primary key cons that column shld not have null constraint assigned to it, if it is then convert it to other cons
+SYNTAX: i) Assign primary key while creating table
+a)create table tblname(col1 datatype PRIMARY KEY, ....);
+OR
+b)create table tblname
+(col1 datatype, CONSTRAINT constraint name PRIMARY KEY(col));
+
+ii)Assign primary key after creating the table
+Alter table tblname ADD PRIMARY KEY(colname);
+Alter table tblname ADD CONSTRAINT consname PRIMARY KEY(col);
+
+iii)Assign primary key to multiple col
+same syntax as i)b)- PRIMARY KEY(col1,col2);
+Single table- single primary key can apply to multi col
+
+6)Remove a constraint-
+Alter table tblname drop constraint consname
+alter table tblname drop Primary key
+
+1)How to assign a not null const after table is created
+Alter table tblname Alter column colname datatype NOT NULL
+_________________________
+6.  Foreign Key Constraint- 
+1)What foreign key does?-connects 2 table
+
+2)What is foreign key?
+*a foreign key is a column in one table that refers to the primary key of another table
+
+3)How to connect two tables
+*Make sure that in table 1 u have a column having foreign key constraint
+*Make sure that in table 2 u have a column having primary key constraints
+*Connect the foreign key of table 1 to primary key of table 2
+
+Terminologies:
+*The table with the foreign key is called child table 
+*while table with primary key is called parent table
+
+4)Benefit of foreign key
+*A foreign key constraints prevents invalid data from being inserted into foreign key column, because the foreign key column can only take those values which are present in the primary key that it is referencing
+
+a)How to assign foreign key constraint while creating table
+Create table tblname
+(col1 datatype,
+col2 datatype REFERENCES table2(primary_key_colm));
+create parent table first with primary key then child table with foreign key and connect
+
+b)How to assign foreign key constraint after creating table
+Alter table child
+ADD Foreign key(colname)REFERENCES parentT(Primary key col)
+________________________
+18)Like operator- used in where clause to search for specified pattern in a text column inorder to do that it needs the help of "wildcards".
+five Wildcards
+1. %     Represents 0 or more chars   bl% (bl,blue,black)
+2. _     Represents single charactr   h_t (hut,hot,hit)
+3. []    Represents any single char   h[oa]t (hot,hat)(not hit)
+         within []
+4. ^     Represents any char not in   h[^oa]t (hit,hip)(x-hat)
+         [] 
+5. -     Represents any single char   h[a-j]t (hat,hit)(x-hot)
+	 within the range
+
+Select * from tablename where colname LIKE 'R%';
+Select * from tablename where colname LIKE 'U_';(UK) (Not USA)
+Select * from tablename where colname LIKE 'U[KA]%';(UK)(Not USA)
+Select * from tablename where colname LIKE 'U[^KA]%';
+Select * from tablename where colname LIKE 'U[A-T]%';(UK)
+To diff character from wildcards use \ before character 
+Select * from tablename where colname LIKE 'AR\%_'escape '\';
+_______________________________________
+JOINS- is used to join or merge two tables
+4 joins - inner join,left join,right join,full outer join
+*Inner join- After joining it gives those values that are common in both the tables
+*Left join- After joining it gives those values common in both tables also the values in left table
+*Right join- After joining it gives those values present in both tables also the values in right table
+*Full outer join-fter joining it gives those values common in both tables also the values in left table also the values in right table
+
+Syntax: 
+Select * from tbl1 inner join tbl2 ON tbl1.col=tbl2.col -inner
+Select * from tbl1 left join tbl2 ON tbl1.col=tbl2.col -left
+Select * from tbl1 right join tbl2 ON tbl1.col=tbl2.col -right
+Select * from tbl1 full outer join tbl2 ON tbl1.col=tbl2.col-out
+________________________ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,98 @@
+Sonu Sathyadas
+C# with .Net Core
+1. History of .NET
+1. What is .NET Core?
+1).NET is a framework introduced by microsoft in 2002 
+2)focused on Windows apps and Web apps
+3)Later added support for Web services, Windows services, Mobile Apps, Gaming apps
+4)Same language same framework can be used to develop all types of project
+________________________________________________________
+
+Disadvantage
+.NET only supporting windows os. If we create a .net project it will run only on Windows os. as microsoft promotes their os too
+________________________________________________________
+
+After 2015, Cloud computing started using open source tech.
+
+Cloud promotes and uses more open source and cross platform(will work on all OS) products
+
+.NET Core intro in 2015-16 by Microsoft as Cross-platform, Open source version of .NET Framework
+
+.NET Familt Tree
+	.NET Framework - Only support Windows OS, Not open source
+		-2002 - Version 1.0
+		-2003 - Version 1.1
+		-2005 - Version 2.0
+		-2007 - Version 3.0
+		-2009 - Version 3.5
+		-2013 - Version 4.0
+		-2015 - Version 4.5
+		-2017 - Version 4.6
+		-2019 - Version 4.7
+		-2022 - Version 4.8 Latest
+	.NET Core - Cross-platform and Open-source, Lightweight
+		-2016 - Version 1.0
+		-2017 - Version 1.1
+		-2018 - Version 2.1 LTS - Long Term Support
+		-2019 - Version 3.0
+		-2020 - Version 3.1 LTS(till Dec 2022)- we use
+	    .NET - begin with .NET 5 .NET core is rebrand as .NET
+		-2021 - Version 5.0
+		-2022 - Version 6.0 LTS(till 2024)
+		-2023 - Version 7.0 (Currently in Preview)beta vs
+___________________________________________________________________________
+
+.NET Framework vs .NET core
+.NET Framework only support Windows. >NET Core supports all OS
+.NET Framework is heavy..NET Core is lightweight(less than 300mb)
+.NET Frame is not designed for cloud..NET for cloud native apps.
+.NET Framw lacks support for containerization..NET Core support easy containerizarion
+.NET Frame does not have built-in Dependency Injectiom. .NET Core has buil-in dependecy injection support
+.NET Frame is not opensource and Community driven..NET Core is open source and community driven
+.NET Frame does not support command line development. But .NET core offers .NET CLI
+
+FCL-framework of Class Library- most of the codes r available in library
+.NET Native(specific to thst os) Runtime(supports application)
+Core CLR(part of runtime)-Common Language Runtime- execution engine that executes in runtime
+functions of clr:
+-Memory management
+-code execution
+-error handling
+-code safety verification
+-garbage collection
+
+.NET Compliant Languages
+-Key Features of .NET languages
+-Standardized by ECMA(European Compitor Manifacture Association)
+-Component based
+-Object Oriented
+-Robust and durable code
+
+Runtime Adaption Layer- User defined libraries that can work in Windows linux and Max- adaption layer adapts to particular os
+
+.NET supported languages
+	C#
+	C++
+	Visual Basic
+	F#
+	J#
+1 language multiple os
+multiple language 1 os
+	50+ languages
+_______________________________
+cd desktop
+dotnet --list-skds
+dotnet --version
+dotnet new console -n secondapp
+dir
+dotnet build
+_______________
+vs code
+select all checkboxes
+
+
+
+
+
+
+

@@ -1,0 +1,82 @@
+TypeScript -handy language-application-scale development
+whole langauge is javascript
+#it is strongly typed, object oriented, compiled language.
+Designed by Anders Hejlsberg at Microsoft. 
+TypeScript -language and set of tools
+Javascript- dynamic lang(runtime checking)
+Typescript- static lang(compile time)
+
+Typescript is just javascript...starts with javascript and ends with javascript.
+
+TypeSript supports other JS Libraries- compiled type script can be  consumed from any javascript code.
+
+Javascript is Type script- any valid .js file can be renamed to .ts and compiled wit typescript files
+
+TypeScript is portable- portable
+
+Why TypeScript
+It is superior to its other counterparts like CoffeeScript and Dartprogramming language
+
+Compilation- Javasript is interpreted language. its need to be run to test it. It takes hours to find error
+But typescript provides error-checking feature.it will compile the code and generate compilation errors. this helps to highlight error b4 scriptis run
+
+Strong Static Typing- Js is not strongly typed. Ts comes with optional static typing and type inteference system thru Typescript Lang Service(TLS).No declaration of data type variablde
+
+TS supports oop conc like classes,interfaces,inheritance
+
+Components of TypeScript
+3 comps
+Language
+The ts compiler
+the typesct lang service
+
+\Users\USER\Desktop\TypeScriptfiles
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+_____________________
+index file post ur sppl as first file
+"index" standard convetoion
+output file stored in .js format 
+in output folder if the files kb exceeds 500kb then it will show warning
+or preceeds 1kb it shows warning for low
+________________________
+for components maximum kb is 2kb should not exceed 4 kb
+
+replace production environment with prod.ts
+
+bootstrap code
+
+"node_modules/bootstrap/dist/css/bootstrap.min.css"
+"node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+
+app.module.ts
+declararion- component declare
+browser module-inbuilt 
+providers- https 
+
+1.To create new app
+ng new appname
+
+2.Install bootstrap,jquery
+npm install bootstrap -save
+npm install jquery -save
+
+3.Now add paths in angular.json
+bootstrap in line 27
+jquery in line 30
+
+4.Add component
+ng gc home
+
+5.tsconfig.jason
+Add strictPropertyInitialization:false
+
+Add productlist
+Add categorylist
+
+
+
+
+
+

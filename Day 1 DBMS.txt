@@ -1,0 +1,167 @@
+Contents
+#4 basic terminologies
+1.create database
+2.use db
+3.create table
+4.alter table
+5.view table
+6.insert rows
+7.view distinct rows
+8.view row values based on condi
+9.sort the values in column
+10.Update row vals in table
+11.Delete rows in table
+12.Drop table
+13.Keys- super,candidate,composite,primary,alternate
+14.Null value, Terminologies-prime:part of candidate,non-prime
+15.Normalisation- first, second and third normal form
+16.Constraints- not null,unique,check,default
+17.Primary key, foreign key constraints
+18.Like Operator- %,_,[],^,-
+19.Joins-inner join,left join,right join,full outer join
+26/08/2022
+4 basic terminology
+1. database- collec of data 
+2. SQL - strctured query language - used to communic with our database
+3. dbms- system used to ins,upd,del and retr data from database. they are of 2 types
+i)rdbms- relational dbms - data is stored in form of tables
+ii)Nrdbms- non rela dbms - not form of tables
+4. MS SQL- microsoft sql - rdbms (we use in our course)
+______________________________________________________
+SSMS install- sql server manag studio
+online editor
+___________
+Create database- create container(collection)
+syntax: create database databasename;
+* 1st char must b alphabet or numeric or underscore or @ or #
+* all char must b apart from 1st char alpha, numeric, _,@,#,$
+* database name must not be a keyword in SQL
+* Embedded spaces r not allowed
+______________
+Use a Database- communucate with dbms which db should be used from many dbs
+Syntax: USE databasename
+______________
+Insert data into database
+*if u want to insert data into db using sql server,then data has to be in form of table
+*table- 2D struct of rows and columns
+*any data that u put into ur dtabase belongs to  certain datatype
+*in diff col have diff data datatype, same col have same type
+_________
+9 data types we use
+5 for numbers 2 for texts 2 for date and datetime
+tinyint,smallint,int,bigint,Decimal(p,s),Varchar(n),text,date,datetime (10^38- duodecilion)
+_____
+3)Create table in database (same 4 rules to create)
+create table tblname
+(
+column1 datatype
+);
+____prefix default dbo. 
+_______________________
+
+4)Alter table in database
+Syntax- Alter table tblname add colname datatype;
+Alter table tblname drop column colname;
+Alter table  tblname alter colname datatype;
+____________________________
+5)Viewing the table
+*View all the col in table
+Select * from tblname;
+*View selected col in tbl
+Select col1,col2,..from tblname
+_____________________
+6)Insert rows in table
+Syntax: insert into tblname values(val1,val2,...);
+can't take control over the insertion of values
+or
+insert into tblname(col1,col2,col3)values(val1,val2,val3);
+take control over the order in which the values r inserted
+________________________
+7. View Distinct Row Values
+Select Distinct col1,col2 from tablename;
+_____________________
+8. View row values based on a condition
+select col1,col2 from tblname where condition;
+=,>,<,>=,<=,<>,NOT,AND,OR,IN(checks any of the values r in specif collection)
+_____________________________
+9. Sort the values in the columns
+Select col1,col2 from tblname order by nameofcoltosprt Asc|desc, nameofcoltosort ASC|DESC
+_______________________________
+10. Update row vals in tbl
+With Condition
+Update tblname set colname=newvalue where condtion;
+Without Condition
+Update tblname set colname=newvalue;
+___________________________________
+11. Delete rows in the table
+With condition
+delete from tblname where condition;- rows which satis the condition will be deleted
+Without condition
+delete from tblname;- all the rows will be deleted 
+______________________________________
+12. Drop table from database
+Drop table tblname;
+_____________________________________________________
+________________________________________________________
+#Key - column or a grp of columns tht uniquely identifies the rows of table
+____
+1.super key- column or grp of columns tht uniquely identifies the rows of table (eg: empid,regid,email,empid+regid,empid+reg+email etc)
+_________
+2.Candidate key - is a superkey that can't be broken down into multiple super keys(eg:empid,regid,email)
+____________
+3.Composite key- is a superkey having more than 1 column in it 
+eg: empid+regid,empid+email,regid+email etc
+________________
+4.Primary key-a single candidate key used to uniquely identifies rows in table (Eg: empid or regid or email)any one
+Any candidate key can act as primary key
+primary key-empid (less value column should be chosen) 
+_________________
+5.Alternate Key-The candidate keys that were not chosen as a primary key(primary key is empid)
+so alternate key is regid
+_________________
+_____________________
+Normalisation
+1. It just a way of properly organize the data in database
+or correctlt store the data in db
+3 approaches:
+______________________
+1. First Normal Form
+It every value in column shd be atomic(not broken down into multiple values)eg:contact: 99999/44444-multiple so not atomic
+Solution: break the column into two which has multiple value 
+________________________
+2. Second normal form
+1.It should be in first normal form
+2. A non-prime attribute shd not be dpendent on part of candidate key. "It shld be dependent on the full candidate key only and not part of candidate key" 
+___________________________________________
+3. Third normal form
+1. It shld be in second normal form
+2. A non-prime attribute shd not be dependent on the non prime attribute (prime+non prime)
+_____________________________
+Terminologies:
+1. Prime attribute- a column that is part of candidate key
+2. Non prime attribute- a column that is not part of candidate key
+___________________________
+Constraints - means rules
+1.NOT NULL- Ensures tht the column will not have any null value. (Constraint name should be next to the datatype)
+When there is no value in a column then it is denoted as null.
+id int NOT NULL
+
+2.Unique- Ensures that the column will not have any duplicate values(same val shd not be repated..only unique)
+Assign constraint next to datatype - id int UNIQUE.
+
+3.Check- Ensures that the values satisfy certain condition
+Checks condition placed next to data type- id int Check(id>0)
+
+4.Default-Ensures that it at all the null value is being inserted into a column.then null will be replaced into specified default value.
+name varchar(20) DEFAULT 'A';
+
+5.Primary key-ensures a column can't have any null values also it make sure that the column doesn't have any duplicate value
+
+6.Foreign key-helps to connect two tables
+____________________
+1. op on ssms
+2. keys
+3. null value
+4. normaliztion
+5. constraints
+_______________

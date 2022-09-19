@@ -1,0 +1,52 @@
+Template Driven Form
+1.FOrmsModule
+
+Reactive form or Model driven form
+1. ReactiveFormModule
+will have FormGroup
+
+define structure of form in component class
+we create the form model with FormGroup,ForControl and FormArrays. 
+we also define validation rules int the component class. 
+then we bind it to the html form in template 
+
+FormGRoup
+cr=new formgroup({})
+the formgroup takes 3 args a collec of a child formcontrol, a validator and an asy validator. validators r optional
+
+
+
+
+ngForm
+1. binds itself to the <form> directive
+2. creates a top-level FormGroup instance
+3. creates FOrmControl instance for each of child control which has ngModel directive
+4. cteates FormGroup instance for each of the ngModelGroup directive
+
+
+Reactive form steps
+1. new project
+2. import ReactiveForm in app.module.ts
+3. import {formcontrol,formgroup and validators} from '@angular/forms'
+4. create obj for FormGroup() in component
+create obj of FormControls inside FormGroup and array of validators
+validators=[required,minlength,maxlength]
+
+
+CRUD
+service- common method tht can be reused
+
+
+dependency injection- the data req in individual component that will be stored in the form of service class and the reference of this service class is injected in constructor
+
+for service:
+ng g s user
+
+Crud Operation steps
+1. Add service using ng g s serv
+2. add components and add model user.ts declare variab
+3. add array (data source or path of data source)
+4. add method to retreive data
+5. inject service ref in the const of components
+
+

@@ -1,0 +1,147 @@
+29/08/2022 - DAY 3
+Function- is a piece of reusable code that u can reuse again and again, that performs certain task
+Two types
+1. pre-defined func- Already created by the person who dev SQL
+2. user defined func- created by you
+
+Pre-defined- avg,count,max,min,sum
+avg- calculate avg of partic column also rounds off the result to previous integer values
+count- calculates total number of values in the collection
+max- calculates the maximum of values in the collection
+min- calculates the minimum of values in the collection
+sum- calculates the sum of values in the collection
+Syntax:
+Select funcname(colname)from tablename;
+
+2.User-defined
+two types i)returns single values as data
+When to use: If we r doing same task again and again with diff values, then it is better to put the task into a user defined function
+Create function funname(@parameter datatype)
+Returns datatype As
+Begin
+	statements
+	return value
+End
+Select prefix.funname(values for parameter)
+Select colms,dbo.funname(param) from tablename;
+
+Note: parameter is a way to pass value into the function for the function to use it.
+Always parameter starts with @ symbol
+
+ii)returns entire table as data
+Create function funname(@parameter datatype)
+Returns table As
+Return statements
+Select * from funname(values for parameter);
+_____________________________________________
+Variables- just a container for a value
+i)Create a variable-Declare @variablename dataType
+ii)How to assign value to a variable- Set @variablename=value
+iii)To view the variable- Select @variablename
+Types of variable
+Pre-defined-created by person who developed SQL,prefixed with @@
+@@Rowcount- counts the rows of the table 
+User-defined- created by us, prefixed with @ symbol
+_______________________________________________
+Stored Procedure- also reusable code can use again and again similar to function. 
+
+Difference between function and stored procedure
+i)Function can return only single entity or single table.SP can return multiple entity(0,single or multiple value)
+
+ii)The code inside the stored procedure is compiled only once where is function the code is compiled as many times it's called.
+*Compiling gives execution plan that is stored in cache iat 1st time from 2nd time it just uses cache which is much faster. So here stored procedure is faster than function.
+
+iii)In case of function, we can only use parameter that pass a value inside the function whereas in stored procedure we have parameters that pass a value inside the stored procedure and outside the stored procedure as well.
+
+##function - in parameter: Stored procedure- in and out parameter
+iv)No need to mention prefix for stored procedure 
+
+Create Procedure procedurename(@parameter datatype)
+As
+Begin
+	Statements
+	//select @count=@@ROWCOUNT//
+End
+EXEC procedurename valuesForParameters= val;
+_
+Declare @varname int;
+EXEC sp @var2=23,@var1=@varname;
+Select @varname;
+In param- takes value from outside pass it inside
+Out Param- takes value from inside and pass it outside
+_______________________
+Sub Queries- Query inside another query
+Sub Query makes the code lot more consice and the task easier
+Select, Insert, Update, Delete Clause
+Select * from tbl1 where Emp in (Select name from tbl2 where sec='A');
+Insert into stud1 Select * from stud2;
+Delete from lti where emp in(Select emp from students where sec='A');
+Update lti set city='pune'where emp in(select emp from stud sec='A');
+___________________________
+Control Flow- helps to control the flow of code execution
+i)While
+While booleanexpr
+Begin
+	sql statements
+End
+print- show single value, select- values and table
+NOte:
+i) The sql statement inside the while loop will keep on executing as long as the booleanexpr result is true
+ii) If it is false, the while loop will not execute
+
+Break-it breaks the loop, and makes sure that the execution goes outside the loop
+Syntax:
+While boolexp
+Begin
+	statements
+	If condition
+	break;
+End
+In this syntax, the break keyword only work only if condition next to if keyword is true
+
+Continue:
+While boolexp
+Begin
+	statements
+	If condition
+	continue;
+End
+In this syntax, the continue keyword make sure the execution go back to first line of the code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

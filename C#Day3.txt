@@ -1,0 +1,45 @@
+static variable initia to 0
+and nulll for string
+static void count
+count++
+static var sould be called using obj emp.salary
+
+Day 4
+Types of classes in C#
+1. Concrete class- it will have everything properties, constructor student class,product,employee
+2. Sealed class- it cannot be inherited
+3. Abstract class
+4. Interface
+
+3. Abstract class
+i)Abstract class has some abstract methods
+ii)We can't initiate abstract class meansno object created
+iii)The class which is derived from abstract class must implement all abstract methods
+iv)In any class at a time only one class can be inherited and implemented
+v)To overcome this difficulty we take advantage of interface
+vi)Abstract is in family
+
+4. Interface
+i)Interface is provider
+ii)interface is not the family member of classes..it can be avail fr multiple classesS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
